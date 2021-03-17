@@ -2,18 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class FollowPlayer : MonoBehaviour
 {
-    public float Speed = 20;
 
+    public GameObject FollowObject;
+    
     // Start is called before the first frame update
     void Start()
     {
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(transform.forward * Time.deltaTime * Speed);
+
+        transform.position = FollowObject.transform.position;
+
     }
 }
